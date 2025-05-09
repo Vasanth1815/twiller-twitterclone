@@ -28,7 +28,7 @@ const Signup = () => {
       };
       //Temporarily disable actual API call
       
-      fetch("http://localhost:5000/register", {
+      fetch("https://twiller-twitterclone-fvh7.onrender.com/register", {
         method: "POST",
         headers: {
           "content-type": "application/json",

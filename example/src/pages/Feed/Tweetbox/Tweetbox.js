@@ -42,7 +42,7 @@ const Tweetbox = () => {
     e.preventDefault();
     if (user?.providerData[0]?.providerId === "password") {
       
-      fetch(`http://localhost:5000/loggedinuser?email=${email}`)
+      fetch(`https://twiller-twitterclone-fvh7.onrender.com/loggedinuser?email=${email}`)
         .then((res) => res.json())
         .then((data) => {
           // console.log(data[0].name);
@@ -68,7 +68,7 @@ const Tweetbox = () => {
       setpost("");
       setimageurl("");
      
-      fetch("http://localhost:5000/post", {
+      fetch("https://twiller-twitterclone-fvh7.onrender.com/post", {
         method: "POST",
         headers: {
           "content-type": "application/json",

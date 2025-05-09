@@ -37,6 +37,12 @@ export function UserAuthContextProvider( props ) {
     }
     function googleSignIn() {
         const googleAuthProvider = new GoogleAuthProvider();
+
+        // 👇 This line forces the Google account chooser to show
+    googleAuthProvider.setCustomParameters({
+        prompt: "select_account",
+    });
+    
         return signInWithPopup(auth, googleAuthProvider);
     }
 
